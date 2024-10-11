@@ -220,6 +220,8 @@ const WebCamCapture = () => {
               >
                 Get Wheel ID
               </Button>
+              <br/><br/>
+              <br/><br/>
             </Card.Title>
             <Card.Title as="h5">
               <Button variant="success"

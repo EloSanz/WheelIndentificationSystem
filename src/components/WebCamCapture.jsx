@@ -215,14 +215,17 @@ const WebCamCapture = () => {
           <Card.Body>
             <Card.Header as="h2">Wheel Indentification System</Card.Header>
             <Card.Title as="h5">
-              <br></br>
-              Camera access is blocked. Please enable camera permissions.
-              <br></br>
-              <br></br>
               <Button variant="primary"
                 onClick={startWebcam}
               >
-                Request Camera Permission
+                Get Wheel ID
+              </Button>
+            </Card.Title>
+            <Card.Title as="h5">
+              <Button variant="success"
+                onClick={startWebcam}
+              >
+                Train Wheel
               </Button>
             </Card.Title>
           </Card.Body>

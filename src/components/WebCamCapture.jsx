@@ -221,8 +221,8 @@ const WebCamCapture = () => {
               >
                 Get Wheel ID
               </Button>
-              <br/>
             </Card.Title>
+            <br/>
             <Card.Title as="h5">
               <Button variant="success"
                 onClick={startWebcam}

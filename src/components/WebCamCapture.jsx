@@ -214,6 +214,7 @@ const WebCamCapture = () => {
         <Card className="mt-5">
           <Card.Body>
             <Card.Header as="h2">Wheel Indentification System</Card.Header>
+            <br/>
             <Card.Title as="h5">
               <Button variant="primary"
                 onClick={startWebcam}

@@ -221,7 +221,6 @@ const WebCamCapture = () => {
                 Get Wheel ID
               </Button>
               <br/><br/>
-              <br/><br/>
             </Card.Title>
             <Card.Title as="h5">
               <Button variant="success"
@@ -237,6 +236,10 @@ const WebCamCapture = () => {
   }
 
   return (
+    <div
+      className="modal show"
+      style={{display:'block', position: 'initial'}}
+    >
     <Container>
       {errorMessage && (
         <div className="alert alert-danger" role="alert">
@@ -244,13 +247,11 @@ const WebCamCapture = () => {
         </div>
        )}
 
-      <Container>
-        <Card className="mt-5">
-          <Card.Body>
-            <Card.Header as="h2">Wheel Indentification System</Card.Header>
-          </Card.Body>
-        </Card>
-      </Container>
+      <Modal.Dialog>
+        <Modal.Header closeButton>
+          <Modal.Title>Wheel Identification System</Modal.Title>
+        </Modal.Header>
+        <Modal.body>
       {permissionGranted ? (
         <>
          <Container className="mt-3">
@@ -324,9 +325,14 @@ const WebCamCapture = () => {
         <Button onClick={startWebcam}>
           Enable Camera
         </Button>
-      )}
-
+      )}</Modal.body>
+      <Modal.Footer>
+        <Button variant="primary">Close</Button>
+        <Button variant="success">Save Changes</Button>
+      </Modal.Footer>
+    </Modal.Dialog>
     </Container>
+    </div>
   );
 };
 
